@@ -1,0 +1,12 @@
+CREATE TABLE egeis_objectType (
+	id BIGINT NOT NULL,
+	type CHARACTER VARYING(50) NOT NULL,
+	description CHARACTER VARYING(250),
+	lastModifiedDate date,
+	tenantId CHARACTER VARYING(250) NOT NULL,
+
+	CONSTRAINT pk_egeis_objectType PRIMARY KEY (id),
+	CONSTRAINT uk_egeis_objectType_type UNIQUE KEY (type)
+);
+
+CREATE SEQUENCE seq_egeis_objectType INCREMENT 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1;
